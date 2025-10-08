@@ -15,10 +15,10 @@ const [usedValues, setUsedValues] = useState([]);
 
 const [point, setPoint] = useState(0);
 
-const bonusPoint = useRef(new Audio("/bonus_point.mp3"));
-const malusPoint = useRef(new Audio("/malus_point.wav"));
-const gameOver = useRef(new Audio("/game_over_score.mp3"));
-const success = useRef(new Audio("/success_score.mp3"));
+const bonusPoint = useRef(new Audio(`${import.meta.env.BASE_URL}bonus_point.mp3`));
+const malusPoint = useRef(new Audio(`${import.meta.env.BASE_URL}malus_point.wav`));
+const gameOver = useRef(new Audio(`${import.meta.env.BASE_URL}game_over_score.mp3`));
+const success = useRef(new Audio(`${import.meta.env.BASE_URL}success_score.mp3`));
 
 const cleanInputString = (str) => {
   const regex = /[^a-zA-ZÀ-ÿ\s]/g;
