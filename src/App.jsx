@@ -66,6 +66,7 @@ const cleanInput = cleanInputString(input);
 
       if (strPal(cleanInput)) {
         setResult(`${input} est un palindrome`); /* result.textContent = `${textInput.value} est un palindrome`; */
+        bonusPoint.current.currentTime = 0;
         bonusPoint.current.play();
         if (cleanInput.length >= 15){
         setScore(prev => prev + 5); /* score += 1; */
@@ -78,15 +79,12 @@ const cleanInput = cleanInputString(input);
         setPoint(3)
       }
 
-      bonusAudio.muted = false;
-      playAudio(bonusAudio);
       } else {
       setResult(`${input} n'est pas un palindrome`);
+      malusPoint.current.currentTime = 0;
       malusPoint.current.play();
       setScore(prev => prev - 10); /* score -= 10 */
       setPoint(-10)
-      malusAudio.muted = false;
-      playAudio(malusAudio);
   }
   
       
@@ -132,10 +130,12 @@ setInput("");  // Réinitialise le champ de saisie pour une nouvelle valeur
   useEffect(() => {
     if (score <= -50) {
       document.body.style.background = "#bd2828";
+      gameOver.current.currentTime = 0;
       gameOver.current.play();
     }
     if (score >= 20) {
       document.body.style.background = "#ffda05";
+      success.current.currentTime = 0;
       success.current.play();
     }
   }, [score])
