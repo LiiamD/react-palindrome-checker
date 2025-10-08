@@ -57,7 +57,7 @@
   }
 
   button {
-    @apply font-sans font-semibold py-2 px-5 text-white bg-purple-700 rounded-[20px] transition-colors cursor-pointer absolute right-[60px] top-[70px];
+    @apply font-sans font-semibold py-2 px-5 text-white bg-purple-700 rounded-[20px] transition-colors cursor-pointer absolute right-[30px] top-[70px];
   }
 
   button:hover {
