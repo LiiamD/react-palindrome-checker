@@ -1,0 +1,151 @@
+@import "tailwindcss";
+/*@import "flowbite";*/
+/* Déclaration des fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..1000;1,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  /*margin: 0;*/
+  /*padding: 0;*/
+}
+
+
+
+@layer base {
+  html, body {
+    @apply h-full m-0;
+  }
+
+  body {
+    @apply flex justify-center items-center bg-[#063640] text-black font-sans overflow-hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  img {
+    @apply inline-block w-[50px] mr-[10px];
+    will-change: transform;
+    animation: floatRotate 10s ease-in-out infinite;
+    transition: transform 300ms ease;
+    transform-origin: center;
+  }
+
+  img:hover {
+    transform: translateY(-15px) rotate(360deg);
+    animation-play-state: paused;
+  }
+
+  
+
+  h1 {
+    @apply text-[2.5em] font-semibold text-white my-[20px] flex flex-row justify-center;
+  }
+
+  .no-input-msg {
+    @apply hidden my-[20px] bg-red-500;
+  }
+
+  .palindrome p {
+    @apply text-black;
+  }
+
+  button {
+    @apply font-sans font-semibold py-2 px-5 text-white bg-purple-700 rounded-[20px] transition-colors cursor-pointer absolute right-[60px] top-[70px];
+  }
+
+  button:hover {
+    @apply bg-purple-800;
+  }
+
+  #result {
+    @apply mt-6 text-center text-black text-[20px] font-[450];
+  }
+
+  .palindrome {
+    @apply bg-white py-5 px-10 rounded-[10px] shadow-[0_4px_8px_rgba(100,0,0,0.9)] relative;
+  }
+
+  .palindrome input {
+    @apply border-0 shadow-[0_3px_0_rgba(100,0,0,0.9)] p-2.5;
+  }
+
+  .palindrome button, 
+  .palindrome input, 
+  .palindrome p {
+    @apply my-2.5 mx-6;
+  }
+
+  .info {
+    @apply bg-[#f7ab28] p-2.5 my-6 w-[450px] rounded-[10px] mx-auto;
+  }
+
+  .info p {
+    @apply text-center font-extrabold p-2.5 text-white;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  }
+
+  span {
+    @apply italic text-purple-700;
+  }
+}
+
+@layer components {
+  #score-point {
+    @apply text-white font-extrabold text-[1.5em];
+    animation: moveUp 1s ease-out forwards;
+  }
+
+  #score-result {
+    @apply bg-white w-full max-w-[200px] py-5 px-10 rounded-[10px] shadow-[0_4px_8px_rgba(100,0,0,0.9)] text-white font-medium text-center my-[20px] mx-auto;
+  }
+
+  #score-end {
+    @apply text-white text-[100px] font-extrabold;
+  }
+
+  .bold {
+    @apply text-[2em] font-bold text-white;
+  }
+
+  #restart-text {
+    @apply text-[2em] font-extrabold italic transition-colors cursor-pointer;
+  }
+
+  #restart-text:hover {
+    @apply text-purple-600;
+  }
+}
+
+/* ---- Animation personnalisée ---- */
+
+/* React logo animation */
+@keyframes floatRotate {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    50%  { transform: translateY(-15px) rotate(360deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+
+
+/* Point animation */
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+
+
+
+
