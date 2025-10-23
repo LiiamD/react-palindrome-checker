@@ -1,16 +1,36 @@
-# React + Vite
+# ⚛️ React Palindrome Checker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une petite application **React** qui vérifie si un mot ou une phrase est un **palindrome** — c’est-à-dire qu’elle se lit de la même façon à l’endroit et à l’envers.  
+Exemple : *kayak*, *radar*, ou encore *ressasser*.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fonctionnalités
 
-## React Compiler
+- Vérifie si le texte entré est un **palindrome** en temps réel.  
+- Ignore les **majuscules, espaces et caractères spéciaux**.  
+- Affiche un **message dynamique** selon le résultat.  
+- Interface simple et responsive.  
+- Développé avec **React Hooks** (`useState`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧩 Aperçu
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*(Tu peux ajouter ici une capture d’écran ou un GIF du projet)*  
+Exemple :  
+![Aperçu du Palindrome Checker](screenshot.png)
+
+---
+
+## 🛠️ Technologies utilisées
+
+- ⚛️ **React** (Vite)  
+- 💅 **CSS Modules / TailwindCSS**  
+- 🧠 **JavaScript (ES6+)**
+
+---
+
+## 📦 Utilisation
+
+1. cliquer sur "github-pages"
